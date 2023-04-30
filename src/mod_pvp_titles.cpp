@@ -184,7 +184,7 @@ public:
 
     void AwardEarnedTitles(Player* me)
     {
-        TeamId teamId = me->GetTeamId(true);
+        TeamId teamId = me->GetTeamId();
         uint32 kills = me->GetUInt32Value(PLAYER_FIELD_LIFETIME_HONORABLE_KILLS);
 
         PvPTitles const pvpTitlesList[14] =
@@ -230,7 +230,7 @@ public:
 
     void CleanUpTitles(int32 mode, Player* me)
     {
-        TeamId teamId = me->GetTeamId(true);
+        TeamId teamId = me->GetTeamId();
 
         PvPTitles const pvpTitlesList[14] =
         {
